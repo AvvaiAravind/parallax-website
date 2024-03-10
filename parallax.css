@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* BASIC RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* GENERAL STYLES */
+
+body {
+  font: 1rem "Lato", serif;
+  margin: auto;
+}
+.section1,
+.section2,
+.section3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  background-attachment: fixed;
+}
+.section1 {
+  background-image: url("images/image1.png"),
+    linear-gradient(to bottom, steelblue, whitesmoke);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  position: absolute;
+  color: whitesmoke;
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+.para {
+  background-color: aliceblue;
+  color: #333;
+  line-height: 1.8;
+  text-indent: 3rem;
+
+  text-align: justify;
+  padding: 1rem;
+}
+.section2 {
+  background-image: url("images/image2.png"),
+    linear-gradient(to bottom, steelblue, whitesmoke);
+  color: aliceblue;
+  min-height: 120vh;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: justify;
+}
+:is(.section2, .section3) :is(h2) {
+  margin-top: 100px;
+  padding: 1rem;
+  background-color: #333;
+}
+:is(.section2, .section3) :is(p) {
+  text-indent: 3rem;
+  background-color: aliceblue;
+  color: #333;
+  padding: 1rem;
+}
+
+.section3 {
+  background-image: url("images/image3.png"),
+    linear-gradient(to bottom, steelblue, whitesmoke);
+  color: aliceblue;
+  min-height: 150vh;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+}
+
+/* MEDIA QUIERIES FOR LARGEER SCREENS*/
+@media screen and (min-width:500px) {
+    .section3 h2 {
+        margin-top: 150px;
+    }
+}
+@media screen and (min-width:769px) {
+    body {
+        font-size: 1.2rem;
+    }
+    .para {
+        padding: 3rem;
+    }
+    .section2 p, .section3 p{
+        padding: 2rem 3rem;
+    }
+}
+@media screen and (min-width:1025px) {
+    body {
+        font-size: 1.5rem;
+    }
+    .section3 h2 {
+        margin-top: 200px;
+    }
+}
